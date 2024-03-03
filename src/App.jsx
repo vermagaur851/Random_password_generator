@@ -47,7 +47,7 @@ function App() {
           />
           <button onClick={copyPasswordToClipboard} className="bg-blue-600 hover:bg-blue-800 active:bg-blue-900 text-white px-3 py-0.5">copy</button>
         </div>
-        <div className="flex tex-sm gap-x-2 text-sm text-grey-100">
+        <div className="flex flex-col gap-x-2 text-sm text-grey-100">
           <div className="flex items-center gap-x-1">
             <input
               type="range"
