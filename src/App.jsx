@@ -12,7 +12,7 @@ function App() {
     let pass = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     if (numAllowed) str = "98765432100123456789" + str + "01234567899876543210";
-    if (charAllowed) str = "!@#$%^&*-_=+=[]{}~" + str + "!@#$%^&*-_=+=[]{}~";
+    if (charAllowed) str = "!@#$%^&*-_=+=~" + str + "!@#$%^&*-_=+=~";
 
     for (let i = 0; i < length; i++) {
       let char = Math.floor(Math.random() * str.length);
