@@ -22,12 +22,14 @@ function App() {
     setPassword(pass);
   }, [length, numAllowed, charAllowed, setPassword]);
 
-  const copyPasswordToClipboard = useCallback(()=>{
-    window.navigator.clipboard.writeText(password)
-    alert("Text Copied")
-  },[password])
+  const copyPasswordToClipboard = useCallback(() => {
+    window.navigator.clipboard.writeText(password);
+    alert("Text Copied !!!")
+  }, [password]);
 
-  useEffect(()=>{passwordGenerator()},[length, numAllowed, charAllowed]);
+  useEffect(() => {
+    passwordGenerator();
+  }, [length, numAllowed, charAllowed]);
 
   return (
     <div>
@@ -44,7 +46,18 @@ function App() {
             readOnly
             ref={passwordRef}
           />
-          <button onClick={copyPasswordToClipboard} className="bg-blue-600 hover:bg-blue-800 active:bg-blue-900 text-white px-3 py-0.5">copy</button>
+          <button
+            onClick={passwordGenerator}
+            className="text-white px-3 py-0.5 bg-white"
+          >
+            🔁
+          </button>
+          <button
+            onClick={copyPasswordToClipboard}
+            className="bg-green-600 hover:bg-green-800 active:bg-green-900 text-white px-3 py-0.5"
+          >
+            copy
+          </button>
         </div>
         <div className="flex flex-col gap-x-2 text-sm text-grey-100">
           <div className="flex items-center gap-x-1">
