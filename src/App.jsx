@@ -71,7 +71,8 @@ function App() {
                 setLength(e.target.value);
               }}
             />
-            <label htmlFor="length">Length: {length}</label>
+            <label htmlFor="length">Length: </label>
+            <input className="bg-gray-700 outline-none" type="text" value={length} onChange={(e)=>{if(e.target.value<=30) setLength(e.target.value)}}/>
           </div>
           <div className="flex items-center gap-x-1">
             <input
