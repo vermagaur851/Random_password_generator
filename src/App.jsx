@@ -94,7 +94,7 @@ function App() {
                 setCharAllowed((prev) => !prev);
               }}
             />
-            <label htmlFor="numInput">Characters</label>
+            <label htmlFor="numInput">special characters</label>
           </div>
         </div>
       </div>
